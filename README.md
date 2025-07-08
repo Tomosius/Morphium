@@ -12,7 +12,7 @@ Morphium/
 ├── data/         # Sample datasets, data files for demo/testing
 ├── docs/         # Documentation, architecture, diagrams, guides
 ├── experiments/  # Notebooks/scripts for rapid prototyping, benchmarks, performance tests
-├── frontend/     # All frontend (UI) code (e.g., Svelte, Tailwind, TypeScript)
+├── frontend/     # All frontend (UI) code (e.g., React, Tailwind, TypeScript)
 ├── scripts/      # Automation, setup scripts, utilities (build, deploy, etc.)
 ├── src/          # Main application source code (Python modules, backend logic)
 ├── tests/        # Automated unit and integration tests
