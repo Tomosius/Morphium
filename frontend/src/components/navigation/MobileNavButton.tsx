@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { menuGroups } from "@/components/navigation/NavigationLinks";
 
 export default function MobileMenuButton() {
-  // State: is the menu open?
   const [open, setOpen] = useState(false);
-  // Ref for the dropdown (for clicking outside)
+  const [openGroup, setOpenGroup] = useState<string | null>(null); // store group title or null
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Close menu on Escape key
+  // Close on Escape
   useEffect(() => {
     function handleEscape(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);
@@ -17,7 +17,7 @@ export default function MobileMenuButton() {
     return () => window.removeEventListener("keydown", handleEscape);
   }, []);
 
-  // Optional: close on click outside
+  // Close on click outside
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (
@@ -25,6 +25,7 @@ export default function MobileMenuButton() {
         !menuRef.current.contains(e.target as Node)
       ) {
         setOpen(false);
+        setOpenGroup(null);
       }
     }
     if (open) {
@@ -32,6 +33,11 @@ export default function MobileMenuButton() {
       return () => document.removeEventListener("mousedown", handleClickOutside);
     }
   }, [open]);
+
+  // Handle group toggle
+  const handleGroupClick = (title: string) => {
+    setOpenGroup((prev) => (prev === title ? null : title));
+  };
 
   return (
     <div className="relative md:hidden" ref={menuRef}>
@@ -53,21 +59,43 @@ export default function MobileMenuButton() {
           aria-label="Mobile navigation"
           className="absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded shadow-lg z-50 p-4"
         >
-          {/* Place your nav here */}
           <nav>
-            <a href="/import" className="block py-1">Import Files</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-            <a href="/db-connect" className="block py-1">Database Connect</a>
-
-            {/* etc */}
+            {menuGroups.map((group) => (
+              <div key={group.title} className="mb-4">
+                {/* Group Header */}
+                <button
+                  className="w-full flex items-center justify-between font-bold text-xs text-gray-500 uppercase mb-2 focus:outline-none"
+                  onClick={() => handleGroupClick(group.title)}
+                  aria-expanded={openGroup === group.title}
+                  aria-controls={`group-${group.title}`}
+                  type="button"
+                >
+                  <span className="flex items-center gap-2">
+                    {group.icon && <span>{group.icon}</span>}
+                    {group.title}
+                  </span>
+                  <span>
+                    {openGroup === group.title ? "▾" : "▸"}
+                  </span>
+                </button>
+                {/* Group Links: Collapse/Expand */}
+                {openGroup === group.title && (
+                  <div className="ml-2" id={`group-${group.title}`}>
+                    {group.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        className="block py-1 text-sm hover:underline"
+                        onClick={() => setOpen(false)} // closes mobile menu on link click
+                      >
+                        {link.icon && <span className="mr-2">{link.icon}</span>}
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </nav>
         </div>
       )}
