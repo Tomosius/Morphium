@@ -1,16 +1,17 @@
 // src/components/TopNav.tsx
 
 import React from "react";
-
+import MobileMenuButton from "@/components/navigation/MobileNavButton";
 
 export default function TopNav() {
     return (
         <header
-            className="flex justify-between items-center p-4 bg-gray-900 text-gray-100 shadow-lg whitespace-nowrap overflow-x-auto"
+            className="flex justify-between items-center p-4 bg-gray-900 text-gray-100 shadow-lg whitespace-nowrap"
             role="banner"
         >
             {/* LEFT side */}
             <div className="flex flex-row items-center gap-4 min-w-0 whitespace-nowrap">
+                <MobileMenuButton />
                 <span className="text-xl font-bold text-white">Logo</span>
                 <span className="ml-2 bg-gray-800 text-gray-100 rounded px-2 py-1 text-xs font-semibold border border-gray-700 hidden md:block">
           Data source
