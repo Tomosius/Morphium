@@ -39,3 +39,9 @@ run:
 # Clean the built output
 clean:
 	rm -rf $(FRONTEND_DIR)/out
+
+
+# PyWebview and React both in dev mode
+dev:
+	@echo "Starting both React dev server and PyWebview in DEV mode..."
+	(cd $(FRONTEND_DIR) && npm run dev &) && sleep 3 && python main.py --dev
