@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69ebb194-a80d-48ec-9215-74aefcf40101" name="Changes" comment="MobileNavButton.tsx added comments in code">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Morphium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Morphium.iml" afterDir="false" />
+    <list default="true" id="69ebb194-a80d-48ec-9215-74aefcf40101" name="Changes" comment="Side Bar code added comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/next.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,32 +45,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/tomaspecukevicius/PycharmProjects/Morphium",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/tomaspecukevicius/PycharmProjects/Morphium/frontend/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tomaspecukevicius/PycharmProjects/Morphium/frontend/src/components/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/tomaspecukevicius/PycharmProjects/Morphium/frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: []
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/components/img" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/frontend/src" />
     </key>
@@ -112,6 +112,8 @@
       <workItem from="1751905176767" duration="7285000" />
       <workItem from="1751998853854" duration="2401000" />
       <workItem from="1752091842503" duration="698000" />
+      <workItem from="1752092557709" duration="4158000" />
+      <workItem from="1752162855135" duration="6092000" />
     </task>
     <task id="LOCAL-00001" summary="Created Project Structure">
       <option name="closed" value="true" />
@@ -177,7 +179,39 @@
       <option name="project" value="LOCAL" />
       <updated>1752092425205</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added .idea to gitignore list">
+      <option name="closed" value="true" />
+      <created>1752092610443</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752092610444</updated>
+    </task>
+    <task id="LOCAL-00010" summary="SideNav.tsx is created &#10;&#10;now On big Screen there is Side Navigation">
+      <option name="closed" value="true" />
+      <created>1752166250259</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1752166250259</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Top Navigation added App Logo">
+      <option name="closed" value="true" />
+      <created>1752168527095</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1752168527095</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Side Bar code added comments">
+      <option name="closed" value="true" />
+      <created>1752168543945</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752168543945</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +226,11 @@
     <MESSAGE value="TopNav.tsx removed &quot;overflow-x-auto&quot; from headderr class." />
     <MESSAGE value="MobileNavButton.tsx is autogenerating all links based on NavigationLiks.ts" />
     <MESSAGE value="MobileNavButton.tsx added comments in code" />
-    <option name="LAST_COMMIT_MESSAGE" value="MobileNavButton.tsx added comments in code" />
+    <MESSAGE value="added .idea to gitignore list" />
+    <MESSAGE value="SideNav.tsx is created &#10;&#10;now On big Screen there is Side Navigation" />
+    <MESSAGE value="Top Navigation added App Logo" />
+    <MESSAGE value="Side Bar code added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Side Bar code added comments" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Morphium$main.coverage" NAME="main Coverage Results" MODIFIED="1752000886286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
